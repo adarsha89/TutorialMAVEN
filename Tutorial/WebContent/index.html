@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	
+  $("button").click(function(){
+	
+    $.ajax({url:"http://localhost:8080/Tutorial/api/AjaxProcessing",dataType: "xml",contentType: "text/xml" ,type: "GET",success:function(result){
+      
+    	$("#test3").val($(result).find("Employee").text());
+		
+    },
+		complete:function(jqXHR, textStatus) {
+                //alert("request complete "+textStatus);
+             },
+            error: function(xhr, textStatus, errorThrown){
+                //alert('request failed->'+textStatus);
+            },
+				
+	
+	});
+	
+  });
+});
+</script>
+
+<title>Retrieve Employee</title>
+</head>
+<body>
+<p id="man"></p>
+<p>Input field: <input type="text" id="test3" value="Mickey"></p>
+<button>Get External Content</button>
+</body>
+</html>

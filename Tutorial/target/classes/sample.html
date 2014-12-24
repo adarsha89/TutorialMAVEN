@@ -1,0 +1,69 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
+
+<script>
+$(document).ready(function(){ 
+	$.validate();  
+  
+   $("button").click(function(){
+	   $.post( "http://localhost:8080/Tutorial/api/AjaxProcessing", $( "#myForm" ).serialize() );
+	$("#test3").val($(result).find("Employee").text());
+  });
+});
+</script>
+<link  href="Welcome.css"></link>
+<title>AddEmployee</title>
+
+</head>
+<body>
+
+
+
+<h1>Add Employee Details</h1>
+
+<p>
+<form method="POST" name="myForm" action=""  id="myForm">
+EmpID<input type="text" name="EmpID" id="EmpID" autofocus="autofocus"  data-validation="custom" data-validation-regexp="^([M,E]{1}_[0-9]+)$"     data-validation-help="Starts with M or E"   data-validation-error-msg="Wrong value for EmpID" >
+<br>
+FirstName<input type="text"  id="FirstName" name="FirstName" data-validation="custom" data-validation-regexp="^([A-Z]{1}[a-z]+)$"    data-validation-length="4-10"   data-validation-error-msg="Wrong value for FirstName" >
+<br>
+LastName(Optional)<input type="text"  id="LastName" name="LastName"   data-validation="custom" data-validation-regexp="^([A-Z]{1}[a-z]+)$"    data-validation-length="4-10"   data-validation-optional="true"   data-validation-error-msg="Wrong value for LastName" >
+<br>
+Username<input type="text"  id="Username" name="Username"    data-validation="alphanumeric"   data-validation-length="8-15"   data-validation-error-msg="Wrong value for UserName" >
+<br>
+Password<input type="text"  id="Password" name="Password"     data-validation="alphanumeric"   data-validation-length="8-15"   data-validation-error-msg="Wrong value for Password" > 
+<br>
+ManagerID(Optional)<input type="text"  id="ManagerID" name="ManagerID"   data-validation="custom" data-validation-regexp="^([M]{1}_[0-9]+)$"   data-validation-optional="true"   data-validation-error-msg="Wrong value for ManagerID" >
+<br>
+Designation
+<select    id="Designation"       name="Designation"          >
+  <option value="ASSOCIATE"  >ASSOCIATE</option>
+  <option value="SENIOR_ASSOCIATE">SENIOR ASSOCIATE</option>
+  <option value="MANAGER">MANAGER</option>
+  <option value="SENIOR_MANAGER">SENIOR MANAGER</option>
+  <option value="DIRECTOR">DIRECTOR</option>
+  <option value="VP">VP</option>
+    <option value="CEO">CEO</option>
+</select>
+
+<br>
+CompanyEmailID<input type="email"  id="CompanyEmailID" name="CompanyEmailID"   data-validation="email"   >
+<br>
+JoiningDate <input type="date"  id="JoiningDate" name="JoiningDate" data-validation-format="yyyy-mm-dd"     data-validation="date"  data-validation-help="yyyy-mm-dd" >
+<br>
+<!--  Photo <input type="file" id="file" name="file[]" height="200px" width="150px" content editable="true" draggable="true" style="outline-color: green;background-color: orange;" multiple />
+<br>-->
+<input type="submit" name="Enter">
+</form>
+<button>Get External Content</button>
+<br>
+<br>
+<a href="AdminHomePage.jsp" id="Go to Admin Home Page">Go to Admin Home Page</a>
+
+
+</body>
+</html>

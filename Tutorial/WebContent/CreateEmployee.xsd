@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="createEmployee-namespace" xmlns:tns="createEmployee-namespace" elementFormDefault="qualified">
+<xs:element name="createEmployee">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Emp_ID">  
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[M,E]_[1-9]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>    	
+      <xs:element name="FirstName">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[A-Z][a-z]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="LastName"   minOccurs="0">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[A-Z][a-z]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="Username">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[A-Z,a-z,1-9]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="Password">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[A-Z,a-z,1-9]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="ManagerID" minOccurs="0">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[M]_[1-9]+"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="Designation">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+    	<xs:enumeration value="ASSOCIATE"/>
+	      <xs:enumeration value="SENIOR_ASSOCIATE"/>
+	      <xs:enumeration value="MANAGER"/>
+	      <xs:enumeration value="SENIOR_MANAGER"/>
+	      <xs:enumeration value="DIRECTOR"/>
+	      <xs:enumeration value="VP"/>
+	      <xs:enumeration value="CEO"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>      
+      <xs:element name="CompanyEmailID">
+      <xs:simpleType>
+    	<xs:restriction base="xs:string">
+      		<xs:pattern value="[A-Z,a-z,1-9]*@[A-Z,a-z,1-9]*"/>
+    	</xs:restriction>
+  		</xs:simpleType>
+  	  </xs:element>
+      <xs:element name="JoiningDate" type="xs:date"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>

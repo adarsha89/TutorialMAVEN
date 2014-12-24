@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<retrievedEmployeesList xmlns:ns2="retrievedEmployee-namespace">
+    <retrievedEmployee>
+        <ns2:Emp_ID>M_13</ns2:Emp_ID>
+        <ns2:Username>sed2</ns2:Username>
+        <ns2:Password>pea</ns2:Password>
+        <ns2:FirstName>Manga</ns2:FirstName>
+        <ns2:LastName>Daw</ns2:LastName>
+        <ns2:Designation>ASSOCIATE</ns2:Designation>
+        <ns2:JoiningDate>1970-01-01+05:30</ns2:JoiningDate>
+        <ns2:CompanyEmailID>ada@twq.com</ns2:CompanyEmailID>
+    </retrievedEmployee>
+    <retrievedEmployee>
+        <ns2:Emp_ID>M_13</ns2:Emp_ID>
+        <ns2:Username>sed2</ns2:Username>
+        <ns2:Password>pea</ns2:Password>
+        <ns2:FirstName>Manga</ns2:FirstName>
+        <ns2:LastName>Daw</ns2:LastName>
+        <ns2:Designation>ASSOCIATE</ns2:Designation>
+        <ns2:JoiningDate>1970-01-01+05:30</ns2:JoiningDate>
+        <ns2:CompanyEmailID>ada@twq.com</ns2:CompanyEmailID>
+    </retrievedEmployee>
+</retrievedEmployeesList>

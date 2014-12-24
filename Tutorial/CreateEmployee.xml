@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<createEmployee xmlns="createEmployee-namespace">
+<Emp_ID>E_123</Emp_ID>
+<FirstName>Adarsha</FirstName>
+<LastName>Shetty</LastName>
+<Username>adrt2</Username>
+<Password>as23</Password>
+<Designation>ASSOCIATE</Designation>
+<CompanyEmailID>ashet1@sapient.com</CompanyEmailID>
+<JoiningDate>1989-08-18+00:05</JoiningDate>
+</createEmployee>

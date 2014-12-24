@@ -1,0 +1,61 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//ApacheSoftwareFoundation//DTDTilesConfiguration2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+<definition name="template" template="/WEB-INF/main_template.jsp">
+<put-attribute name="title" value="" /> 
+<put-attribute name="header" value="/WEB-INF/top.jsp"/>
+<put-attribute name="menu" value="/WEB-INF/side.jsp"/>
+<put-attribute name="footer" value="/WEB-INF/footer.jsp"/>
+<put-attribute name="body" value="" />  
+</definition>
+<definition name="admintemplate" template="/WEB-INF/main_template.jsp">
+<put-attribute name="title" value="" /> 
+<put-attribute name="header" value="/WEB-INF/topadmin.jsp"/>
+<put-attribute name="menu" value="/WEB-INF/sideadmin.jsp"/>
+<put-attribute name="footer" value="/WEB-INF/footer.jsp"/>
+<put-attribute name="body" value="" />  
+</definition>
+<definition name="admintemplate2" template="/WEB-INF/main_template2.jsp">
+<put-attribute name="title" value="" /> 
+<put-attribute name="header" value="/WEB-INF/topadmin.jsp"/>
+<put-attribute name="footer" value="/WEB-INF/footer.jsp"/>
+<put-attribute name="body" value="" />  
+</definition>
+<definition name="loginPage" extends="template">
+<put-attribute name="title" value="Login Page" /> 
+<put-attribute name="body" value="/WEB-INF/LoginPage.jsp"/>
+</definition>
+<definition name="adminHomePage" extends="template">
+<put-attribute name="title" value="Admin Home Page" /> 
+<put-attribute name="header" value="/WEB-INF/topadmin.jsp"/>
+<put-attribute name="body" value="/WEB-INF/AdminHomePage.jsp"/>
+</definition>
+<definition name="addEmployeePage" extends="admintemplate">
+<put-attribute name="title" value="Add Employee Page" /> 
+<put-attribute name="body" value="/WEB-INF/AddEmployee.jsp"/>
+</definition>
+<definition name="updateEmployeePage" extends="admintemplate">
+<put-attribute name="title" value="Update Employee Page" /> 
+<put-attribute name="body" value="/WEB-INF/UpdateEmployee.jsp"/>
+</definition>
+<definition name="retrieveEmployeePage" extends="admintemplate2">
+<put-attribute name="title" value="Retrieve Employee Page" /> 
+<put-attribute name="body" value="/WEB-INF/RetrieveEmployee.jsp"/>
+</definition>
+<definition name="deleteEmployeePage" extends="admintemplate">
+<put-attribute name="title" value="Delete Employee Page" /> 
+<put-attribute name="body" value="/WEB-INF/DeleteEmployee.jsp"/>
+</definition>
+<definition name="errorPage" extends="template">
+<put-attribute name="title" value="Error Page" /> 
+<put-attribute name="body" value="/WEB-INF/ErrorInLogin.jsp"/>
+</definition>
+<definition name="logoutPage" extends="template">
+<put-attribute name="title" value="Logout Page" /> 
+<put-attribute name="body" value="/WEB-INF/Logout.jsp"/>
+</definition>
+<definition name="userHomePage" extends="template">
+<put-attribute name="title" value="User Home Page" /> 
+<put-attribute name="header" value="/WEB-INF/topadmin.jsp"/>
+<put-attribute name="body" value="/WEB-INF/UserHomePage.jsp"/>
+</definition>
+</tiles-definitions>
